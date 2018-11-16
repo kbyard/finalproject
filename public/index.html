@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta author="Kathrin Byard" content="Project 3">
+    <title>Synesthesia | Home</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/dnd.css">
+    <link rel="stylesheet" type="text/css" href="./css/cbtest.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron" back>
+        <h1 text="center">
+            <img src="./img/fancyS.png" height=10% width=10% alt="S" id="titleSynth">ynesthesia
+        </h1>
+        <p>"I see my life in terms of music.” ―Albert Einstein</p>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./index.html">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#music">Sheet Music</a></li>
+                <li><a href="#piano">Piano</a></li>
+                <li><a href="#magnets">Magnets</a></li>
+                <li><a href="#test">Colorblind Test</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="./signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div class="row">
+
+            <div class="col-sm-10">
+
+                <div class="row" id="music">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-left">
+                            <div class="panel-body">
+                                <div id="container1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="piano">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-left">
+                            <div class="panel-body">
+                                <div id="root"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="magnets">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="well container-fluid" id="letterContainer"></div>
+                                <div class="row controls">
+                                    <ul>
+                                        <li class="controlsTitle">Options</li>
+                                        <li><label><input type="checkbox" name="snap" id="snap" value="1">Snap end position to grid</label></li>
+                                        <li><label><input type="checkbox" name="liveSnap" id="liveSnap" value="1">Live snap</label></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div id="buttons"></div>
+                                    <div id="letter"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="test">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-body">
+                                <div class="form-group rsform-block rsform-block-framecontent">
+                                    <div id="frame" role="application"></div>
+                                </div>
+                                <hr>
+                                <div class="col-sm-6 formControls rsform-block-submit">
+                                    <button type="submit" name="form[submit]" id="submit" onclick="copyText()" class="rsform-submit-button  btn btn-primary">Submit Quiz</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-2 well">
+                <div class="well">
+                    <img id="hueKnob" class="img-fluid" src="https://greensock.com/wp-content/uploads/custom/draggable/img/knob.png" alt="dial that changes hue">
+                    <button id="Hue">console.log() Hue</button>
+                    <br>
+                </div>
+                <div class="well">
+                    <img id="saturationKnob" class="img-fluid" src="https://greensock.com/wp-content/uploads/custom/draggable/img/knob.png" alt="dial that changes saturation">
+                    <button id="Saturation">console.log() Saturation</button>
+                    <br>
+                </div>
+                <div class="well">
+                    <img id="lightnessKnob" class="img-fluid" src="https://greensock.com/wp-content/uploads/custom/draggable/img/knob.png" alt="dial that changes lightness">
+                    <button id="Lightness">console.log() Lightness</button>
+                    <br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>
+            Copyright © 2018 by <a href="https://github.com/apleek3/finalproject">These Guys</a>.
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="greensock-js-shockingly-green/src/uncompressed/plugins/ThrowPropsPlugin.js"></script>
+    <script type="text/javascript" src="./js/dnd.js"></script>
+    <script type="text/javascript" src="./js/cbtest.js"></script>
+
+</body>
+
+</html>
